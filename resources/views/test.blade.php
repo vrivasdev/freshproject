@@ -12,6 +12,6 @@
     </head>
     <body>
         <h5> This is a test</h5>
-        <p>{{ $post }}</p>
+        <p>{{ $post->body }}</p>
     </body>
 </html>
