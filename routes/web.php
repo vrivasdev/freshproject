@@ -13,4 +13,15 @@
 Route::get('/', function() {
     return view('welcome');
 });
+
 Route::get('/posts/{post}', 'PostsController@show');
+
+Route::post('/articles', 'ArticlesController@store');
+
+Route::get('/articles', function(){
+    return view('articles.index', [
+        'articles' => App\Articles::latest()->get()
+    ]);
+});
+
+Route::get('/articles/create', 'ArticlesController@create');
