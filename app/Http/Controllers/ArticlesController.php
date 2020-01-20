@@ -41,13 +41,13 @@ class ArticlesController extends Controller
             'body' => 'required'
         ]);
 
-        $article = new Article();
+        $articles = new Articles();
 
-        $article->title = request('title');
-        $article->excerpt = request('excerpt');
-        $article->body = request('body');
+        $articles->title = request('title');
+        $articles->excerpt = request('excerpt');
+        $articles->body = request('body');
 
-        $article->save();
+        $articles->save();
 
         return redirect('/articles');
     }
@@ -58,7 +58,7 @@ class ArticlesController extends Controller
      * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function show(Article $article)
+    public function show(Articles $articles)
     {
         //
     }
@@ -66,10 +66,10 @@ class ArticlesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Article  $article
+     * @param  \App\Articles  $articles
      * @return \Illuminate\Http\Response
      */
-    public function edit(Article $article)
+    public function edit(Articles $articles)
     {
         //
     }
@@ -78,10 +78,10 @@ class ArticlesController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Article  $article
+     * @param  \App\Articles  $articles
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Article $article)
+    public function update(Request $request, Articles $articles)
     {
         //
     }
@@ -89,10 +89,10 @@ class ArticlesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Article  $article
+     * @param  \App\Articles  $articles
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Article $article)
+    public function destroy(Articles $articles)
     {
         //
     }
