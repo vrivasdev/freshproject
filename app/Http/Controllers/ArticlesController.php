@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Articles;
+use App\Article;
 use Illuminate\Http\Request;
 
 class ArticlesController extends Controller
@@ -41,13 +41,13 @@ class ArticlesController extends Controller
             'body' => 'required'
         ]);
 
-        $articles = new Articles();
+        $article = new Article();
 
-        $articles->title = request('title');
-        $articles->excerpt = request('excerpt');
-        $articles->body = request('body');
+        $article->title = request('title');
+        $article->excerpt = request('excerpt');
+        $article->body = request('body');
 
-        $articles->save();
+        $article->save();
 
         return redirect('/articles');
     }
@@ -55,10 +55,10 @@ class ArticlesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Articles  $articles
+     * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function show(Articles $articles)
+    public function show(Article $article)
     {
         //
     }
@@ -66,10 +66,10 @@ class ArticlesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Articles  $articles
+     * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function edit(Articles $articles)
+    public function edit(Article $article)
     {
         //
     }
@@ -78,10 +78,10 @@ class ArticlesController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Articles  $articles
+     * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Articles $articles)
+    public function update(Request $request, Article $article)
     {
         //
     }
@@ -89,10 +89,10 @@ class ArticlesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Articles  $articles
+     * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Articles $articles)
+    public function destroy(Article $article)
     {
         //
     }
